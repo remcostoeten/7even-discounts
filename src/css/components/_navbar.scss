@@ -19,8 +19,8 @@
 			&:hover {
 				scale: 1.1;
 			}
-			
-            &:not(:last-child) {
+
+			&:not(:last-child) {
 				margin-right: 4rem;
 			}
 		}
@@ -42,6 +42,32 @@
 			&:not(:last-child) {
 				margin-right: 3rem;
 			}
+		}
+	}
+}
+
+.offcanvas-menu {
+	&__menu {
+		button {
+			margin: $spacing;
+			position: absolute;
+			right: 0;
+		}
+	}
+}
+
+// Offcanvas toggle button
+
+#nav-icon2 {
+	span {
+		&:nth-child(odd) {
+			left: 0px;
+			border-radius: 9px 0 0 9px;
+		}
+
+		&:nth-child(even) {
+			left: 50%;
+			border-radius: 0 9px 9px 0;
 		}
 	}
 }
