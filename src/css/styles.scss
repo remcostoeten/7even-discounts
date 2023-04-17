@@ -1,6 +1,9 @@
 // Variables
 @import './variables/colors';
 @import './variables/typography';
+@import './variables/responsive';
 
 // core
 @import './core/base';
+@import './core/mixins';
+@import './core/reset';
