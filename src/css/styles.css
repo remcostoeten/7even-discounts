@@ -36,6 +36,38 @@ h6 {
   margin: 0 auto;
 }
 
+body {
+  background-color: #1c2026;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+body:after {
+  content: "";
+  height: 100vh;
+  width: 75vw;
+  background-image: linear-gradient(to left bottom, #c400f7, #905aff, #577aff, #128fff, #019ef9);
+  border-radius: 50%;
+  filter: blur(500px);
+  right: -250px;
+  animation: AnimationName 15s ease infinite;
+  position: absolute;
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    opacity: 0.9;
+    filter: blur(750px);
+    background-position: 300% 50%;
+    transform: rotate(150deg);
+  }
+  100% {
+    background-position: 150% 50%;
+  }
+}
 @media (min-width: 768px) and (max-width: 1023px) {
   .hide-mobile-tablet {
     display: none;
@@ -147,7 +179,7 @@ select {
 .header {
   display: flex;
   justify-content: space-between;
-  margin-top: 60px;
+  padding-top: 60px;
 }
 .header__left {
   display: flex;
