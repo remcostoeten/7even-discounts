@@ -23,6 +23,15 @@ body {
 		position: absolute;
 	}
 }
+
+@media only screen and (max-device-width: 768px) {
+	body {
+		&:after {
+			position: unset;
+		}
+	}
+}
+
 @keyframes AnimationName {
 	0% {
 		background-position: 0% 50%;
