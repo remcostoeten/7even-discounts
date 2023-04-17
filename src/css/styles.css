@@ -31,6 +31,11 @@ h6 {
   font-size: 15px;
 }
 
+.container {
+  width: 1024px;
+  margin: 0 auto;
+}
+
 @media (min-width: 768px) and (max-width: 1023px) {
   .hide-mobile-tablet {
     display: none;
@@ -101,7 +106,6 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
@@ -139,4 +143,43 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+.header__left {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.header__left li {
+  font-size: 18px;
+  transition: 250ms ease all;
+  cursor: pointer;
+}
+.header__left li:hover {
+  scale: 1.1;
+}
+.header__left li:not(:last-child) {
+  margin-right: 4rem;
+}
+.header__right {
+  display: flex;
+}
+.header__right svg {
+  width: 2rem;
+  height: auto;
+  transition: 250ms ease all;
+  cursor: pointer;
+}
+.header__right svg:hover {
+  scale: 1.1;
+}
+.header__right svg:not(:last-child) {
+  margin-right: 3rem;
 }/*# sourceMappingURL=styles.css.map */

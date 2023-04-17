@@ -1,0 +1,47 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 60px;
+
+	&__left {
+		display: flex;
+		flex: 1;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		li {
+			font-size: 18px;
+			transition: 250ms ease all;
+			cursor: pointer;
+
+			&:hover {
+				scale: 1.1;
+			}
+			
+            &:not(:last-child) {
+				margin-right: 4rem;
+			}
+		}
+	}
+
+	&__right {
+		display: flex;
+
+		svg {
+			width: 2rem;
+			height: auto;
+			transition: 250ms ease all;
+			cursor: pointer;
+
+			&:hover {
+				scale: 1.1;
+			}
+
+			&:not(:last-child) {
+				margin-right: 3rem;
+			}
+		}
+	}
+}
