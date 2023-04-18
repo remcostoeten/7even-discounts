@@ -1,5 +1,4 @@
 import React from 'react';
-import DiscordSvg from './svg/discord';
 import SwipeableTemporaryDrawer from './Offcanvas';
 import { useMediaQuery } from '@mui/material';
 
@@ -21,9 +20,7 @@ export default function Navbar() {
 						<li>Websocket</li>
 						<li>Contact</li>
 					</ul>
-					<div className='header__right'>
-						<DiscordSvg />
-					</div>
+					<div className='header__right'></div>
 				</nav>
 			)}
 		</>
