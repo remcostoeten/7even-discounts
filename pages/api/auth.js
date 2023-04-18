@@ -1,5 +1,6 @@
+// pages/api/auth.js
 import nextConnect from 'next-connect';
-import passport from '../../../utils/passport';
+import passport from '../../utils/passport';
 
 const handler = nextConnect();
 

@@ -3,7 +3,7 @@ import SwipeableTemporaryDrawer from './Offcanvas';
 import { useMediaQuery } from '@mui/material';
 import DiscordSvg from './svg/Discord';
 import Link from 'next/link';
-import { useUser } from '../contexts/UserContext';
+import { useUser } from '@/utils/UserContext';
 
 export default function Navbar() {
 	const { user } = useUser();
