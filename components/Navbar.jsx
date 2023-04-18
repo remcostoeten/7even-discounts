@@ -1,9 +1,14 @@
 import React from 'react';
 import SwipeableTemporaryDrawer from './Offcanvas';
 import { useMediaQuery } from '@mui/material';
+import DiscordSvg from './svg/Discord';
+import Link from 'next/link';
+import { useUser } from '../contexts/UserContext';
 
 export default function Navbar() {
+	const { user } = useUser();
 	const isMobile = useMediaQuery('(max-width:768px)');
+
 	return (
 		<>
 			{isMobile ? (
@@ -16,11 +21,22 @@ export default function Navbar() {
 				<nav className='header container'>
 					<ul className='header__left'>
 						<li>Home</li>
-						<li>Pricing</li>
+						{!user && (
+							<Link href='/api/auth'>
+								<li>Login</li>
+							</Link>
+						)}
+						{user && (
+							<Link href='/api/logout'>
+								<li>Logout</li>
+							</Link>
+						)}
 						<li>Websocket</li>
 						<li>Contact</li>
 					</ul>
-					<div className='header__right'></div>
+					<div className='header__right'>
+						<DiscordSvg />
+					</div>
 				</nav>
 			)}
 		</>
