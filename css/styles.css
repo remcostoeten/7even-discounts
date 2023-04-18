@@ -243,6 +243,11 @@ select {
   border-radius: 0 9px 9px 0;
 }
 
+@media only screen and (max-device-width: 1025px) {
+  .header {
+    padding-left: 40px;
+  }
+}
 #nav-icon2 span {
   display: block;
   position: absolute;
@@ -338,6 +343,11 @@ select {
   border: none;
   background-color: #29283a;
   position: relative;
+  padding: 0 16px;
+  color: white;
+}
+.intro__terminal input:focus {
+  outline: none;
 }
 .intro__terminal input:before {
   content: "l";
@@ -485,4 +495,14 @@ select {
 }
 .fill:hover:before {
   width: 100%;
+}
+
+@media only screen and (max-device-width: 1025px) {
+  .intro {
+    padding: 40px;
+    flex-direction: column;
+  }
+  .intro__text {
+    padding-bottom: 100px;
+  }
 }/*# sourceMappingURL=styles.css.map */

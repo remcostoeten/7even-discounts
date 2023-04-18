@@ -74,3 +74,9 @@
 		}
 	}
 }
+
+@media only screen and (max-device-width: 1025px) {
+	.header {
+		padding-left: 40px;
+	}
+}

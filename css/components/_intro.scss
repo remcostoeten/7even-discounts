@@ -42,3 +42,14 @@
 		}
 	}
 }
+
+@media only screen and (max-device-width: 1025px) {
+	.intro {
+		padding: 40px;
+		flex-direction: column;
+
+		&__text {
+			padding-bottom: 100px;
+		}
+	}
+}
