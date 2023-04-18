@@ -1,6 +1,6 @@
 import nextConnect from 'next-connect';
 import passport from '../../../utils/passport';
-
+import passport from '../'
 const handler = nextConnect();
 
 handler.use(passport.initialize());
