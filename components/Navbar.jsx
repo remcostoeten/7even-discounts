@@ -1,6 +1,5 @@
 import React from 'react';
 import DiscordSvg from './svg/discord';
-import { GitHub, InstallMobileTwoTone } from '@mui/icons-material';
 import SwipeableTemporaryDrawer from './Offcanvas';
 import { useMediaQuery } from '@mui/material';
 
@@ -24,7 +23,6 @@ export default function Navbar() {
 					</ul>
 					<div className='header__right'>
 						<DiscordSvg />
-						<GitHub />
 					</div>
 				</nav>
 			)}
