@@ -1,6 +1,7 @@
-import react from 'react';
-import '../css/styles.css';
+// pages/app.jsx
+import React from 'react';
 import Navbar from '../components/Navbar';
+
 function App() {
 	return (
 		<>
