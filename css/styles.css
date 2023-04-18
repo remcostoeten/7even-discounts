@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&family=Roboto&display=swap");
 * {
   font-family: "Poppins", sans-serif;
 }
@@ -185,6 +187,7 @@ select {
   display: flex;
   justify-content: space-between;
   padding-top: 60px;
+  padding-bottom: 60px;
 }
 .header__left {
   display: flex;
@@ -312,15 +315,145 @@ select {
   top: 29px;
 }
 
+.intro__terminal .input-wrapper {
+  position: relative;
+}
+.intro__terminal .input-wrapper .blinking {
+  top: 20px;
+  width: 1px;
+  height: 3rem;
+  background: white;
+  position: absolute;
+  animation: blink 1s infinite;
+}
+.intro__terminal .input-wrapper .blinking-two {
+  width: 1px;
+  height: 3rem;
+  background: red;
+  position: absolute;
+  animation: blink 1s infinite;
+  top: 20px;
+}
+.intro__terminal input {
+  border: none;
+  background-color: #29283a;
+  position: relative;
+}
+.intro__terminal input:before {
+  content: "l";
+  animation: blink 1s infinite;
+  display: block;
+  font-size: 20px;
+  color: white;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+.terminal__title {
+  font-family: "Roboto", sans-serif;
+  color: rgb(79, 79, 79);
+  display: inline-block;
+  margin: auto;
+  position: absolute;
+  left: 45%;
+  font-size: 1rem;
+}
+.terminal__taskbar {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-image: linear-gradient(rgb(229, 229, 229), rgb(205, 205, 205));
+  padding-left: 5px;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  position: relative;
+  height: 20px;
+}
+
+.controls {
+  align-items: center;
+  display: flex;
+}
+.controls__left {
+  display: flex;
+  flex-direction: row;
+}
+.controls__left .dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  margin-right: 3px;
+}
+.controls__left .red {
+  background-color: rgb(255, 97, 89);
+}
+.controls__left .yellow {
+  background-color: rgb(255, 193, 63);
+}
+.controls__left .green {
+  background-color: rgb(33, 206, 79);
+}
+.controls__center {
+  margin: 0 auto;
+  font-size: 0.7em;
+}
+
+.blinking {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+.window {
+  height: 600px;
+  width: 800px;
+}
+
+.content {
+  background-color: rgb(41, 40, 58);
+  font-family: "Fira Code", monospace;
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.prompt {
+  color: rgb(92, 202, 141);
+}
+
+.command {
+  color: rgb(178, 175, 211);
+}
+
+.result {
+  line-height: 1.5rem;
+  color: rgb(178, 175, 211);
+}
+
+.dir {
+  font-weight: bold;
+  color: rgb(99, 174, 245);
+}
+
+.highlight {
+  background-color: rgb(254, 216, 125);
+}
+
 .intro {
   display: flex;
   align-items: flex-start;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   height: 100vh;
   font-size: 64px;
   line-height: 96px;
-  padding: 0 60px;
 }
 .intro h1 {
   color: #0ee6b7;
