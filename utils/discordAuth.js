@@ -1,6 +1,6 @@
-// utils/passport.js
-import DiscordStrategy from 'passport-discord';
+import nextConnect from 'next-connect';
 import passport from 'passport';
+import DiscordStrategy from 'passport-discord';
 
 const { DISCORD_CLIENT_ID, DISCORD_CLIENT_SECRET, DISCORD_CALLBACK_URL } =
 	process.env;
@@ -13,9 +13,8 @@ passport.use(
 			callbackURL: DISCORD_CALLBACK_URL,
 			scope: ['identify', 'email'],
 		},
-		async (accessToken, refreshToken, profile, done) => {
+		async (accessToken, _, profile, done) => {
 			try {
-				// You can save the profile data to your database here
 				return done(null, profile);
 			} catch (err) {
 				return done(err, null);
@@ -23,3 +22,9 @@ passport.use(
 		},
 	),
 );
+
+const initialize = () => {
+	return passport.initialize();
+};
+
+export { initialize, passport };

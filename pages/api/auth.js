@@ -1,17 +1,15 @@
-// pages/api/auth.js
 import nextConnect from 'next-connect';
-import passport from '../../utils/passport';
+import { passport, initialize } from '../../utils/discordAuth';
 
 const handler = nextConnect();
 
-handler.use(passport.initialize());
+handler.use(initialize());
 
 handler.get(
 	passport.authenticate('discord', {
-		failureRedirect: '/login', // Redirect to the login page on failure
+		failureRedirect: '/login',
 	}),
 	(req, res) => {
-		// Successful authentication, redirect to your desired page
 		res.redirect('/');
 	},
 );

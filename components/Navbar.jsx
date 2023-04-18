@@ -21,12 +21,11 @@ export default function Navbar() {
 				<nav className='header container'>
 					<ul className='header__left'>
 						<li>Home</li>
-						{!user && (
+						{!user ? (
 							<Link href='/api/auth'>
 								<li>Login</li>
 							</Link>
-						)}
-						{user && (
+						) : (
 							<Link href='/api/logout'>
 								<li>Logout</li>
 							</Link>

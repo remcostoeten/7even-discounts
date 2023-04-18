@@ -1,4 +1,3 @@
-// contexts/UserContext.js
 import { createContext, useState, useContext, useEffect } from 'react';
 
 const UserContext = createContext();
