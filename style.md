@@ -8,3 +8,7 @@ https://cdn.discordapp.com/attachments/
 
 <!-- Discord login -->
 <!-- https://www.youtube.com/watch?v=H1V716XPUEs -->
+
+<!-- Buttons -->
+
+https://www.figma.com/file/eTjFxyY4r3B5J1LfXynyAG/Buttons-UI-Kit-Community?is-community-duplicate=1&fuid=
