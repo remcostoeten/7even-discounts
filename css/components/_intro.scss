@@ -1,0 +1,45 @@
+.intro {
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	justify-content: center;
+	height: 100vh;
+	font-size: 64px;
+	line-height: 96px;
+	padding: 0 60px;
+	h1 {
+		color: $green;
+	}
+	span {
+		font-weight: 600;
+		color: $white;
+		offset: 0px, 4px rgba(0, 0, 0, 0.25);
+	}
+}
+
+.fill {
+	margin: 20px auto;
+	width: fit-content;
+	font-size: 140px;
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke: 1px $green;
+	position: relative;
+	cursor: pointer;
+
+	&:before {
+		position: absolute;
+		content: attr(data-text);
+		top: 0;
+		left: 0px;
+		-webkit-text-fill-color: $green;
+		width: 0;
+		overflow: hidden;
+		transition: 0.25s ease-out;
+	}
+
+	&:hover {
+		&:before {
+			width: 100%;
+		}
+	}
+}

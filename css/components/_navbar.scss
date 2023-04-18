@@ -1,0 +1,75 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 60px;
+
+	&__left {
+		display: flex;
+		flex: 1;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		li,
+		a {
+			font-size: 18px;
+			transition: 250ms ease all;
+			cursor: pointer;
+			color: $white;
+
+			&:hover {
+				scale: 1.1;
+			}
+
+			&:not(:last-child) {
+				margin-right: 4rem;
+			}
+		}
+	}
+
+	&__right {
+		display: flex;
+
+		svg {
+			width: 2rem;
+			height: auto;
+			transition: 250ms ease all;
+			cursor: pointer;
+
+			&:hover {
+				scale: 1.1;
+			}
+
+			&:not(:last-child) {
+				margin-right: 3rem;
+			}
+		}
+	}
+}
+
+.offcanvas-menu {
+	&__menu {
+		button {
+			margin: $spacing;
+			position: absolute;
+			right: 0;
+		}
+	}
+}
+
+// Offcanvas toggle button
+
+#nav-icon2 {
+	span {
+		&:nth-child(odd) {
+			left: 0px;
+			border-radius: 9px 0 0 9px;
+		}
+
+		&:nth-child(even) {
+			left: 50%;
+			border-radius: 0 9px 9px 0;
+		}
+	}
+}
