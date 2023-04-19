@@ -59,8 +59,6 @@
 	}
 }
 
-// Offcanvas toggle button
-
 #nav-icon2 {
 	span {
 		&:nth-child(odd) {
@@ -75,7 +73,7 @@
 	}
 }
 
-@media only screen and (max-device-width: 1025px) {
+@include below-desktop {
 	.header {
 		padding-left: 40px;
 	}

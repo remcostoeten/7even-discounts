@@ -243,7 +243,7 @@ select {
   border-radius: 0 9px 9px 0;
 }
 
-@media only screen and (max-device-width: 1025px) {
+@media (min-width: 0px) and (max-width: 1024px) {
   .header {
     padding-left: 40px;
   }
